@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jikenhuavppy.github.io/indexm-hth-com-cn/sitemap.xml

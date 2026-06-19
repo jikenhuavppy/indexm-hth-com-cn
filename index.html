@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华体会 · 资料整理指引</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f9fafc;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif;
+            color: #1e2a3a;
+            line-height: 1.6;
+            padding: 2rem 1.5rem 3rem;
+        }
+
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        /* hero */
+        .hero {
+            padding: 3.5rem 0 2rem 0;
+            border-bottom: 1px solid #e6edf4;
+            margin-bottom: 2.8rem;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #0a1a2b;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero .sub {
+            font-size: 1.05rem;
+            color: #4b5e72;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        .hero .sub a {
+            color: #1a6b8a;
+            text-decoration: none;
+            border-bottom: 1px solid #bdd3e0;
+            transition: border-color 0.2s;
+        }
+
+        .hero .sub a:hover {
+            border-bottom-color: #1a6b8a;
+        }
+
+        /* 通用章节 */
+        section {
+            margin-bottom: 2.8rem;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 500;
+            color: #0f2336;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.01em;
+            padding-bottom: 0.2rem;
+            border-bottom: 1px solid #e3ebf3;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #253544;
+        }
+
+        .quiet-note {
+            background: #f1f5fa;
+            padding: 1.2rem 1.5rem;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            color: #1d3142;
+            margin: 1.6rem 0;
+        }
+
+        .quiet-note strong {
+            font-weight: 500;
+            color: #0a2b3f;
+        }
+
+        /* 特点卡片 — 极简留白卡片 */
+        .feature-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+            margin: 1.2rem 0 1.8rem;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            border: 1px solid #e7eef6;
+            transition: box-shadow 0.15s;
+        }
+
+        .feature-item h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #10344b;
+            margin-bottom: 0.2rem;
+        }
+
+        .feature-item p {
+            font-size: 0.93rem;
+            color: #3a4e62;
+            margin-bottom: 0;
+        }
+
+        /* FAQ 摘要 (简短) */
+        .faq-mini {
+            background: white;
+            border-radius: 16px;
+            padding: 1.2rem 1.5rem 1.6rem;
+            border: 1px solid #e3ecf5;
+        }
+
+        .faq-mini details {
+            margin-bottom: 0.4rem;
+            border-bottom: 1px solid #edf3f9;
+            padding: 0.5rem 0;
+        }
+
+        .faq-mini details:last-child {
+            border-bottom: none;
+        }
+
+        .faq-mini summary {
+            font-weight: 500;
+            color: #10344b;
+            cursor: default;
+            padding: 0.3rem 0;
+            font-size: 0.95rem;
+            list-style: none;
+        }
+
+        .faq-mini summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-mini p {
+            font-size: 0.9rem;
+            color: #2b4154;
+            padding-left: 0.2rem;
+            margin: 0.4rem 0 0.2rem 0;
+        }
+
+        /* 底部 */
+        .footer-links {
+            margin-top: 3.2rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e0e9f2;
+            font-size: 0.9rem;
+            color: #4a6075;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem 2.5rem;
+        }
+
+        .footer-links a {
+            color: #1a6b8a;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s;
+        }
+
+        .footer-links a:hover {
+            border-bottom-color: #1a6b8a;
+        }
+
+        .footer-links span {
+            color: #6d7f91;
+        }
+
+        .disclaimer {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #6b7f91;
+            background: #f1f6fc;
+            padding: 1rem 1.4rem;
+            border-radius: 40px;
+            text-align: center;
+        }
+
+        /* 响应式 */
+        @media (max-width: 520px) {
+            body {
+                padding: 1.5rem 1rem 2.5rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero .sub {
+                font-size: 0.95rem;
+            }
+
+            .feature-item {
+                padding: 0.8rem 1.2rem;
+            }
+
+            .faq-mini {
+                padding: 1rem 1.2rem 1.3rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- hero 区 / 信息索引切入 -->
+    <div class="hero">
+        <h1>资料整理 · 信息索引</h1>
+        <div class="sub">
+            面对分散的网络信息，系统化地梳理来源常常比直接浏览更重要。
+            本文档围绕 <a href="https://indexm-hth.com.cn">华体会</a> 相关内容，从信息聚合与结构化归档的角度，
+            提供一份简洁的参考索引，方便后续查阅与对照。
+        </div>
+    </div>
+
+    <!-- 说明区 / 为什么做索引 -->
+    <section>
+        <h2>从信息碎片到结构化索引</h2>
+        <p>
+            一个主题的资料如果散落在不同页面、不同时间点，后续比对和回顾会变得低效。
+            我们尝试将关于 <a href="https://indexm-hth.com.cn">华体会</a> 的公开信息进行基础归类，
+            提取出相对稳定的说明及参考方向，帮助感兴趣的人快速建立认知框架。
+        </p>
+        <p>
+            以下索引基于可获取的公开介绍与功能说明整理，并不代表官方立场，仅用作阅读辅助。
+        </p>
+    </section>
+
+    <!-- 优势区 / 索引特点 -->
+    <section>
+        <h2>索引内容的特点</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h3>分类梳理</h3>
+                <p>将信息按功能、场景、常见问题等维度分组，减少重复检索时间。</p>
+            </div>
+            <div class="feature-item">
+                <h3>保留原始表述</h3>
+                <p>引用时尽量保持原有措辞，仅做必要精简，避免二次曲解。</p>
+            </div>
+            <div class="feature-item">
+                <h3>关注边界与提示</h3>
+                <p>对于不确定或存在变动的部分，单独标注，供读者自行核实。</p>
+            </div>
+        </div>
+
+        <div class="quiet-note">
+            <strong>关于信息时效：</strong> 互联网内容会持续更新，本索引仅反映某一阶段的整理结果，
+            建议结合最新页面进行对照。索引中提到的 <a href="https://indexm-hth.com.cn">华体会</a> 相关功能与描述，
+            请以其官方网站实际展示为准。
+        </div>
+    </section>
+
+    <!-- FAQ 摘要区 -->
+    <section>
+        <h2>常见疑问摘要</h2>
+        <div class="faq-mini">
+            <details open>
+                <summary>▸ 这个索引覆盖哪些内容？</summary>
+                <p>主要收录关于 <a href="https://indexm-hth.com.cn">华体会</a> 的基本介绍、功能模块、使用场景提示以及部分公开问答。</p>
+            </details>
+            <details>
+                <summary>▸ 信息是否经过二次验证？</summary>
+                <p>索引基于公开页面整理，部分描述经过交叉比对，但建议读者以官方渠道信息为第一信源。</p>
+            </details>
+            <details>
+                <summary>▸ 索引多久更新一次？</summary>
+                <p>目前为不定期更新。若内容发生明显变动，会尝试修正或补充说明。</p>
+            </details>
+        </div>
+        <p style="margin-top: 1.2rem; font-size: 0.92rem; color: #2d445c;">
+            更多疑问可参考页面内的提示段落，或直接访问相关来源进行确认。
+        </p>
+    </section>
+
+    <!-- 底部链接区 + 说明 -->
+    <div class="footer-links">
+        <a href="https://indexm-hth.com.cn">华体会</a>
+        <span>资料索引 · 非官方</span>
+        <span>仅供信息参考</span>
+        <a href="#" style="pointer-events: none; opacity: 0.6; border: none;">存档说明</a>
+    </div>
+
+    <div class="disclaimer">
+        本页面为信息索引与整理辅助，内容均源自公开渠道，不构成任何建议或承诺。
+        请读者自行判断与核实。
+    </div>
+</div>
+</body>
+</html>
