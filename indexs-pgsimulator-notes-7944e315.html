@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资料索引 · pg模拟器 | 文档引擎与信息归档</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f9fafb;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #1e293b;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        /* hero */
+        .hero {
+            padding: 80px 0 48px;
+            border-bottom: 1px solid #e2e8f0;
+            margin-bottom: 56px;
+        }
+        .hero h1 {
+            font-size: 2.25rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #0f172a;
+        }
+        .hero p {
+            font-size: 1.125rem;
+            color: #475569;
+            max-width: 640px;
+        }
+        .hero .meta-badge {
+            display: inline-block;
+            margin-top: 28px;
+            font-size: 0.8rem;
+            color: #94a3b8;
+            border: 1px solid #e2e8f0;
+            border-radius: 100px;
+            padding: 4px 14px;
+            letter-spacing: 0.02em;
+        }
+        /* sections */
+        section {
+            margin-bottom: 52px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0f172a;
+            letter-spacing: -0.01em;
+            margin-bottom: 20px;
+            border-left: 4px solid #3b82f6;
+            padding-left: 16px;
+        }
+        h3 {
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #1e293b;
+        }
+        .desc-text {
+            font-size: 1rem;
+            color: #334155;
+            margin-bottom: 18px;
+        }
+        .desc-text a {
+            color: #2563eb;
+            text-decoration: none;
+            border-bottom: 1px solid #bfdbfe;
+            transition: border-color 0.2s;
+        }
+        .desc-text a:hover {
+            border-bottom-color: #2563eb;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px 32px;
+            margin: 20px 0 12px;
+        }
+        .feature-item {
+            border-top: 1px solid #eef2f6;
+            padding-top: 18px;
+        }
+        .feature-item .label {
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+            color: #0f172a;
+        }
+        .feature-item .detail {
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.6;
+        }
+        .faq-summary {
+            background: #ffffff;
+            border: 1px solid #e9edf2;
+            border-radius: 12px;
+            padding: 28px 32px;
+            margin: 24px 0 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+        .faq-summary dt {
+            font-weight: 500;
+            font-size: 1rem;
+            margin-bottom: 6px;
+            color: #0f172a;
+            cursor: default;
+        }
+        .faq-summary dd {
+            font-size: 0.925rem;
+            color: #475569;
+            margin-bottom: 20px;
+            padding-left: 8px;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 14px;
+        }
+        .faq-summary dd:last-child {
+            margin-bottom: 0;
+        }
+        .footnote {
+            padding: 36px 0 56px;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 24px;
+        }
+        .footnote p {
+            font-size: 0.875rem;
+            color: #64748b;
+            max-width: 600px;
+        }
+        .footnote a {
+            color: #2563eb;
+            text-decoration: none;
+            border-bottom: 1px solid #bfdbfe;
+        }
+        .footnote a:hover {
+            border-bottom-color: #2563eb;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #eef2f6;
+            margin: 32px 0;
+        }
+        @media (max-width: 640px) {
+            .hero { padding: 48px 0 32px; }
+            .hero h1 { font-size: 1.75rem; }
+            .feature-grid { grid-template-columns: 1fr; gap: 20px; }
+            .faq-summary { padding: 20px; }
+            .container { padding: 0 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- hero 区 -->
+        <header class="hero">
+            <h1>资料整理视角下的<br>pg模拟器</h1>
+            <p>围绕文档索引、配置归档与结构记录，为需要系统化浏览的读者提供一份精炼的信息锚点。这里不追求叙事铺陈，专注于可查、可引、可参照的内容骨架。</p>
+            <span class="meta-badge">索引节点 · 2025</span>
+        </header>
+
+        <!-- 优势区：信息结构与特征 -->
+        <section>
+            <h2>索引层优势</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="label">记录结构</div>
+                    <div class="detail">从字段定义到参数树，保持层级清晰，减少重复检索。每一组配置都附带上下文来源。</div>
+                </div>
+                <div class="feature-item">
+                    <div class="label">术语对照</div>
+                    <div class="detail">常见别名、版本差异、默认值变化均以注释形式归档，便于横向比对。</div>
+                </div>
+                <div class="feature-item">
+                    <div class="label">参考锚点</div>
+                    <div class="detail">关键路径附带原文引用与修订日期，适合作为二次验证的起点。</div>
+                </div>
+                <div class="feature-item">
+                    <div class="label">低噪排版</div>
+                    <div class="detail">窄栏正文、克制的高亮与一致的空格节奏，让注意力集中在内容本身。</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 说明区：展开资料整理的方法 -->
+        <section>
+            <h2>说明 · 资料编排逻辑</h2>
+            <p class="desc-text">
+                在接触 <a href="https://indexs-pgsimulator.com">pg模拟器</a> 的过程中，整理者更倾向于将其视作一个开放的配置与文档集合——记录的思路是提取共性要素，剥离多余叙事，保留可复用的参数片段、环境依赖以及常见行为模式。目前归档的内容主要覆盖初始化参数、日志采样格式、连接池示例与权限映射简表，均为稳定可参照的信息单元。
+            </p>
+            <p class="desc-text">
+                资料索引本身不替代官方文档，而是充当快速定位的侧边栏。对于熟悉模拟器配置但不想反复翻阅冗长说明的读者，这种按条目组织的方式可以减少信息摩擦。每一条记录都标注了来源与最近核对时间，并留有交叉验证的路径。
+            </p>
+        </section>
+
+        <!-- FAQ 摘要 -->
+        <section>
+            <h2>FAQ · 常见查证</h2>
+            <dl class="faq-summary">
+                <dt>Q1: 资料中的参数版本对应关系是否可靠？</dt>
+                <dd>所有版本号与参数默认值均基于公开发布说明及稳定版代码注释整理，时间戳标注在每条记录尾部。若发现差异，欢迎通过索引页面提交修正参考。</dd>
+
+                <dt>Q2: 能否直接复制配置片段用于生产环境？</dt>
+                <dd>索引中的配置段仅作为结构示例与参考起点，具体调优仍需结合运行时资源与安全策略。建议将此处片段视为模板骨架，而非最终配置。</dd>
+
+                <dt>Q3: 为什么索引中没有包含详细的性能数值？</dt>
+                <dd>本站侧重结构索引与字段释义，性能基准数据因环境变量差异较大，不放入核心索引，避免误导。如需性能参考，可查阅官方基准测试报告。</dd>
+            </dl>
+        </section>
+
+        <!-- 底部链接 与 索引说明 -->
+        <footer class="footnote">
+            <p>本页由资料索引页自动生成，内容遵循简洁可查原则。主要引用与参照均指向 <a href="https://indexs-pgsimulator.com">pg模拟器</a> 的文档模块。如需引用具体条目，请注明来源及核对日期。</p>
+            <hr>
+            <p style="font-size: 0.8rem; color: #94a3b8;">索引维护 · 信息锚点 · 仅作结构参考</p>
+        </footer>
+    </div>
+</body>
+</html>
