@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pg模拟器 · 产品说明与使用参考</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #fafbfc;
+            color: #1f2933;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7;
+            padding: 2rem 1.5rem 4rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .page-wrap {
+            max-width: 680px;
+            width: 100%;
+        }
+        /* 标题体系 */
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin: 0 0 0.15rem;
+            color: #0b1e2e;
+        }
+        .subhead {
+            font-size: 0.95rem;
+            color: #5b6f82;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin: 2.2rem 0 0.6rem;
+            color: #0b1e2e;
+            letter-spacing: -0.01em;
+        }
+        h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin: 1.4rem 0 0.3rem;
+            color: #1f3a4b;
+        }
+        p {
+            margin-bottom: 1rem;
+            color: #2d3f50;
+        }
+        a {
+            color: #1e6b9b;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s, color 0.15s;
+        }
+        a:hover {
+            border-bottom-color: #1e6b9b;
+            color: #0a4468;
+        }
+        /* 卡片/区块 */
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.2rem 0 0.5rem;
+        }
+        .feature-item {
+            flex: 1 1 180px;
+            background: #ffffff;
+            border: 1px solid #e5eaef;
+            border-radius: 12px;
+            padding: 1rem 1.1rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+        }
+        .feature-item strong {
+            display: block;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+            color: #0b1e2e;
+        }
+        .feature-item span {
+            font-size: 0.88rem;
+            color: #3f5668;
+        }
+        .note-box {
+            background: #f0f4fa;
+            border-left: 3px solid #86b4d9;
+            border-radius: 6px;
+            padding: 0.9rem 1.2rem;
+            margin: 1.8rem 0 1rem;
+            font-size: 0.9rem;
+            color: #1f3a4b;
+        }
+        .faq-item {
+            margin: 0.8rem 0;
+        }
+        .faq-q {
+            font-weight: 500;
+            margin-bottom: 0.1rem;
+        }
+        .faq-a {
+            font-size: 0.9rem;
+            color: #3f5668;
+            margin-left: 0.25rem;
+        }
+        .divider {
+            border: 0;
+            height: 1px;
+            background: #e2e8f0;
+            margin: 2.2rem 0 1.8rem;
+        }
+        .footer-note {
+            font-size: 0.8rem;
+            color: #6b7f92;
+            margin-top: 2.8rem;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 1.2rem;
+            text-align: center;
+        }
+        /* 响应式 */
+        @media (max-width: 480px) {
+            body { padding: 1.2rem 1rem 3rem; }
+            h1 { font-size: 1.6rem; }
+            .feature-grid { flex-direction: column; }
+            .feature-item { flex: 1 1 auto; }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+
+    <h1>pg模拟器 · 资料索引与使用说明</h1>
+    <div class="subhead">基于 H5 环境的功能整理 · 信息密度适中</div>
+
+    <p>
+        对于需要在移动端或浏览器中快速体验 PostgreSQL 核心交互的用户，<a href="https://h5-pgsimulator.com">pg模拟器</a> 提供了一个轻量的查询沙箱。它并非完整数据库实例，而是围绕 SQL 解析、表结构预览和基础 CRUD 模拟构建的资料索引型工具，适合学习验证、方案初筛或演示场景。
+    </p>
+
+    <h2>核心能力摘要</h2>
+    <p>
+        工具覆盖了 PostgreSQL 常见的数据类型、索引策略、连接查询与聚合写法。内部维护了一套预置数据集（订单、用户、商品），可通过模拟器快速检验语句逻辑，无需搭建本地环境。所有操作均在浏览器前端完成，不向远程服务器发送用户输入的 SQL 文本。
+    </p>
+
+    <div class="feature-grid">
+        <div class="feature-item">
+            <strong>预置模式</strong>
+            <span>三张关联表，含主键、外键与常用索引定义</span>
+        </div>
+        <div class="feature-item">
+            <strong>语法高亮</strong>
+            <span>编辑器支持 SQL 关键词着色，初步格式提示</span>
+        </div>
+        <div class="feature-item">
+            <strong>结果快照</strong>
+            <span>返回最多 200 行模拟数据，支持导出 CSV</span>
+        </div>
+    </div>
+
+    <h2>适用场景建议</h2>
+    <p>
+        当你需要快速验证一个查询的结构是否正确、对比不同写法的执行计划（仅文本级模拟），或者向同事/学员演示 PostgreSQL 的基础行为时，<strong>pg模拟器</strong> 可以省去本地安装与配置的步骤。尤其适合以下情况：
+    </p>
+    <ul style="padding-left: 1.4rem; margin-bottom: 1rem; color: #2d3f50;">
+        <li>教学培训中实时展示 SELECT / JOIN / GROUP BY 效果</li>
+        <li>快速检查索引字段选择与 WHERE 条件的匹配逻辑</li>
+        <li>在没有网络数据库环境的设备上做离线功能演示</li>
+    </ul>
+
+    <h2>使用注意事项</h2>
+    <p>
+        由于运行在浏览器沙箱中，<strong>pg模拟器</strong> 不会持久化用户数据，也无法执行 DDL、存储过程或触发器等高级特性。模拟的查询结果基于静态快照，并非真实数据库响应，因此不适合用于生产数据校验或性能基准测试。建议将其作为概念验证或学习辅助工具。
+    </p>
+
+    <div class="note-box">
+        ⚡ 提示：每次刷新页面后，预置数据会重置为初始状态。如需保留当前查询或结果，可使用导出功能保存为本地文件。
+    </div>
+
+    <h2>常见疑问简述</h2>
+
+    <div class="faq-item">
+        <div class="faq-q">Q：模拟器支持所有 PostgreSQL 函数吗？</div>
+        <div class="faq-a">A：仅覆盖最常用的聚合、字符串、日期与数学函数。完整列表可在工具内置的「函数参考」面板中查阅。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">Q：是否可以导入自己的表结构？</div>
+        <div class="faq-a">A：当前版本不开放自定义 DDL，但预置模式覆盖了多数基础场景。后续版本规划中已列入表结构编辑功能。</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-q">Q：模拟数据量级有多大？</div>
+        <div class="faq-a">A：每张表约 30–80 行记录，足以演示查询行为，但无法模拟大数据量下的索引效果。</div>
+    </div>
+
+    <hr class="divider">
+
+    <p>
+        如果你希望进一步了解 PostgreSQL 在实际项目中的配置与调优，或需要一个更接近真实环境的测试平台，推荐通过 <a href="https://h5-pgsimulator.com">pg模拟器</a> 作为起点，再过渡到本地安装的数据库实例。工具本身保持轻量、无追踪，所有处理均在客户端完成。
+    </p>
+
+    <div class="footer-note">
+        pg模拟器 · 浏览器端 PostgreSQL 查询沙箱<br>
+        内容仅供学习与参考，不提供任何明示或暗示的保证。
+    </div>
+
+</div>
+</body>
+</html>
