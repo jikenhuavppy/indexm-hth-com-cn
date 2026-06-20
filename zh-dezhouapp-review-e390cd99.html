@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资料索引：德州扑克app | 专题介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f1f2f4;
+            color: #1f2a3d;
+            line-height: 1.7;
+            padding: 2rem 1.5rem 3rem;
+        }
+
+        .page-wrap {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* 首页横幅 —— 杂志式标题区 */
+        .hero {
+            background: #ffffff;
+            padding: 3rem 2rem 2.5rem;
+            border-radius: 24px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.04), 0 1px 4px rgba(0,0,0,0.02);
+            border: 1px solid #e4e6ea;
+            margin-bottom: 2.5rem;
+            transition: box-shadow 0.2s;
+        }
+
+        .hero:hover {
+            box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+        }
+
+        .hero-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #6b7a8f;
+            background: #eef0f3;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            margin-bottom: 1.4rem;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            color: #0f172a;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: #3b4a5c;
+            max-width: 80%;
+            margin-bottom: 0.4rem;
+        }
+
+        .hero .intro-line {
+            font-size: 0.95rem;
+            color: #5a6a7c;
+            border-left: 3px solid #b5c0cf;
+            padding-left: 1rem;
+            margin-top: 1.2rem;
+        }
+
+        /* 卡片式分区 */
+        .card-section {
+            background: #ffffff;
+            border: 1px solid #e4e7ec;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02), 0 1px 3px rgba(0,0,0,0.02);
+            padding: 2rem 2rem 2.4rem;
+            margin-bottom: 2rem;
+            transition: box-shadow 0.2s;
+        }
+
+        .card-section:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+        }
+
+        .card-section h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid #eceef2;
+        }
+
+        .card-section h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #2c3b4c;
+            margin: 1.2rem 0 0.4rem;
+        }
+
+        .card-section p {
+            margin-bottom: 0.9rem;
+            color: #2d3a4b;
+        }
+
+        .card-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.8rem 0 0.2rem;
+        }
+
+        .card-section li {
+            position: relative;
+            padding-left: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #314153;
+        }
+
+        .card-section li::before {
+            content: "·";
+            position: absolute;
+            left: 0;
+            color: #7a8a9d;
+            font-weight: 700;
+        }
+
+        .note-box {
+            background: #f7f8fa;
+            border-radius: 14px;
+            padding: 1rem 1.4rem;
+            margin-top: 1.2rem;
+            border-left: 4px solid #a3b3c7;
+            font-size: 0.9rem;
+            color: #2e3e51;
+        }
+
+        .inline-link {
+            color: #2f4b70;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #cbd5e1;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        .inline-link:hover {
+            border-bottom-color: #2f4b70;
+            color: #0f263b;
+        }
+
+        /* 页尾 */
+        .site-footer {
+            margin-top: 2.8rem;
+            padding: 1.6rem 2rem;
+            background: #ffffff;
+            border: 1px solid #e4e7ec;
+            border-radius: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            text-align: center;
+            font-size: 0.9rem;
+            color: #536477;
+        }
+
+        .site-footer .tagline {
+            font-weight: 450;
+            margin-bottom: 0.2rem;
+        }
+
+        .site-footer .foot-note {
+            font-size: 0.8rem;
+            color: #78889c;
+            letter-spacing: 0.02em;
+        }
+
+        /* 响应式 */
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem 0.8rem 2rem;
+            }
+            .hero {
+                padding: 2rem 1.2rem 1.8rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero p {
+                max-width: 100%;
+            }
+            .card-section {
+                padding: 1.5rem 1rem;
+            }
+            .card-section h2 {
+                font-size: 1.25rem;
+            }
+            .site-footer {
+                padding: 1.2rem 0.8rem;
+            }
+        }
+
+        @media (min-width: 800px) {
+            .hero p {
+                max-width: 70%;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+
+    <!-- 首页横幅 -->
+    <header class="hero">
+        <span class="hero-tag">资料整理 · 专题索引</span>
+        <h1>关于德州扑克app</h1>
+        <p>一份从信息角度梳理的介绍页 —— 规则、场景与使用方向。</p>
+        <div class="intro-line">
+            本文档为对 <a href="https://zh-dezhouapp.com" class="inline-link">德州扑克app</a> 相关内容的客观资料汇编，以索引和说明的方式呈现。
+        </div>
+    </header>
+
+    <!-- 背景说明 -->
+    <section class="card-section">
+        <h2>背景 · 从牌桌到资料整理</h2>
+        <p>德州扑克作为一种策略棋牌形式，在国内外拥有大量讨论社区与规则体系。围绕数字化的移动端工具，出现了多个以规则学习、牌局记录或模拟练习为主的程序。本文所参考的站点 <a href="https://zh-dezhouapp.com" class="inline-link">德州扑克app</a> 即为其中一个信息聚合与介绍页面。</p>
+        <p>本次专题的目的并非评价或推荐，而是从资料整理的角度，将常见的功能描述、使用情景与相关资讯分条归纳，方便有了解需求的读者快速建立认知框架。</p>
+        <div class="note-box">
+            <strong>说明：</strong> 以下内容基于公开资料与常见功能描述整理，不构成任何鼓励或诱导。具体体验请以实际应用为准。
+        </div>
+    </section>
+
+    <!-- 三段自然介绍：特点 / 应用场景 / 常见疑问摘要 -->
+    <section class="card-section">
+        <h2>常见特点与功能方向</h2>
+        <p>根据对 <a href="https://zh-dezhouapp.com" class="inline-link">德州扑克app</a> 相关介绍页的观察，以及同类工具的一般特性，可以从下面几个方面进行归纳：</p>
+        <ul>
+            <li><strong>规则学习辅助：</strong> 多数应用提供基础手牌强度、位置概念、下注轮次的教学，适合新手阅读规则或快速复习。</li>
+            <li><strong>练习与模拟：</strong> 部分应用内置简单的 AI 对局或单桌练习模式，用于熟悉不同翻牌圈场景下的决策流程。</li>
+            <li><strong>信息记录：</strong> 有些工具支持牌局记录与基本统计（入池率、加注频率等），方便玩家自我复盘。</li>
+            <li><strong>资料索引：</strong> 例如 <a href="https://zh-dezhouapp.com" class="inline-link">德州扑克app</a> 这样的页面，本身即为信息站点，汇集了规则说明、术语表或工具推荐。</li>
+        </ul>
+        <p>在具体使用之前，建议先确认页面或应用的定位是偏向学习资料、模拟工具还是纯粹的规则索引，以便匹配个人需求。</p>
+    </section>
+
+    <section class="card-section">
+        <h2>应用场景参考</h2>
+        <p>从资料整理的角度，可以将德州扑克app的使用场景大致分为以下三类：</p>
+        <h3>个人学习场景</h3>
+        <p>当用户希望通过移动端快速查阅规则、牌型概率或常见术语时，一个结构清晰的资料页（如 <a href="https://zh-dezhouapp.com" class="inline-link">德州扑克app</a>）可以充当口袋参考。这类场景不需要实时对局，更侧重清晰的信息分层。</p>
+        <h3>策略思考场景</h3>
+        <p>部分用户会利用 app 中的模拟功能或手牌记录功能，研究不同翻牌圈的应对方式。重要的是保持对信息的客观理解——任何策略都有其适用边界。</p>
+        <h3>信息收集场景</h3>
+        <p>对于想了解德州扑克整体框架的新用户，一个聚合页面（例如本专题所指向的站点）可以降低信息筛选成本。阅读时建议结合书籍或正规规则文档交叉验证。</p>
+        <div class="note-box">
+            ⚡ 任何场景下，请理性使用工具，不沉迷，不参与任何非法现金对局。
+        </div>
+    </section>
+
+    <section class="card-section">
+        <h2>FAQ 摘要 · 常见疑问归类</h2>
+        <p>根据社区常见提问，这里列出三条与资料索引相关的问题：</p>
+        <ul>
+            <li><strong>这个页面是官方 app 吗？</strong> 通常这类介绍页是资料汇编或第三方索引，而非官方应用商店页面。建议以实际应用商店的开发者信息为准。</li>
+            <li><strong>可以通过它直接开始游戏吗？</strong> 像 <a href="https://zh-dezhouapp.com" class="inline-link">德州扑克app</a> 这样以内容介绍为主的站点，主要提供信息参考，不包含直接游戏入口。如需练习，建议另行选择合规模拟软件。</li>
+            <li><strong>信息准确吗？</strong> 任何第三方整理页面都可能存在滞后或偏差。核心规则建议参考权威扑克书籍或赛事规则文档，本专题仅作为索引参考。</li>
+        </ul>
+        <p style="margin-top: 0.8rem;">以上内容仅针对信息检索场景，不构成任何形式的建议。</p>
+    </section>
+
+    <!-- 页尾访问提示 -->
+    <footer class="site-footer">
+        <div class="tagline">资料整理 · 索引参考 · 专题卡片</div>
+        <p style="margin: 0.4rem 0 0.1rem;">更多相关信息可查阅 <a href="https://zh-dezhouapp.com" class="inline-link">德州扑克app</a> —— 一个以规则介绍与信息聚合为主的页面。</p>
+        <div class="foot-note">本页面为独立编写的介绍页，内容基于公开资料整理，不保证时效性。请理性使用。</div>
+    </footer>
+
+</div>
+</body>
+</html>
